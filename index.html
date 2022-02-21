@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>SDLC</title>
+  </head>
+<!--What is  a ADLC Software Development Life Cycle (SDLC)
+MVC - modal view controler-->
+<body>
+<style>
+  h1{
+    background-color: #eee;
+    color: #444;
+  }
+  p{
+    color: #444;
+  }
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+<h1>Programming Styles (Large-scale)</h1>
+<button class="accordion">Imperative</button>
+<div class="panel">
+  <p>In computer science, imperative programming is a programming paradigm that uses statements that change a program's state. In much the same way that the imperative mood in natural languages expresses commands, an imperative program consists of commands for the computer to perform.</p>
+</div>
+
+<button class="accordion">Logical</button>
+<div class="panel">
+  <p>Logic programming is a programming paradigm which is largely based on formal logic. Any program written in a logic programming language is a set of sentences in logical form, expressing facts and rules about some problem domain. Major logic programming language families include Prolog, answer set programming (ASP) and Datalog. In all of these languages, rules are written in the form of clauses:
+
+    H :- B1, …, Bn.
+
+and are read declaratively as logical implications:
+
+    H if B1 and … and Bn.
+
+H is called the head of the rule and B1, ..., Bn is called the body. Facts are rules that have no body, and are written in the simplified form:
+
+    H.
+
+In the simplest case in which H, B1, ..., Bn are all atomic formulae, these clauses are called definite clauses or Horn clauses. However, there are many extensions of this simple case, the most important one being the case in which conditions in the body of a clause can also be negations of atomic formulas. Logic programming languages that include this extension have the knowledge representation capabilities of a non-monotonic logic. </p>
+</div>
+
+<button class="accordion">Functional.</button>
+<div class="panel">
+  <p>Functional programming is a programming paradigm in which we try to bind everything in pure mathematical functions style. It is a declarative type of programming style. Its main focus is on “what to solve” in contrast to an imperative style where the main focus is “how to solve”.</p>
+</div>
+<button class="accordion">Object-Oriented.</button>
+<div class="panel">
+  <p>Object Oriented programming is a programming style which is associated with the concepts like class, object, Inheritance, Encapsulation, Abstraction, Polymorphism. Most popular programming languages like Java, C++, C#, Ruby, etc. follow an object-oriented programming paradigm.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
